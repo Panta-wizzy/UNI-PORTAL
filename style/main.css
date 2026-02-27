@@ -36,7 +36,6 @@ header {
 header h1{
     font-size: 28px;
     color: var(--text-color);
-    padding-left: 10px;
     margin: 10px;
 }
 span{
@@ -76,9 +75,26 @@ header nav ul li :hover{
     border-radius: 8px;
     color: var(--text-color);
 }
-.call-btn:hover{
-    background-color: var(--main-card);
+
+button{
+        width: 100%;
+        margin: 20px;
+        height: 30px;
+        border-radius: 8px;
+        color: var(--bg-color);
+        font-weight: 600;
 }
+.call-btn:hover{
+        scale: 1.05;
+        transform: translateY(-30%);
+        box-shadow: 0px 8px  15px rgba(0,0,0,1);
+        border-radius: 8px;
+        background-color: var(--main-card);
+        color: black;
+        cursor: pointer;
+        font-weight: 600;
+}
+
 
 
 /* side bar */
@@ -253,8 +269,8 @@ header nav ul li :hover{
         border: none;
         background-color: transparent;
         cursor: pointer;
-        top: 0;
-        left: 0;
+        bottom: 0;
+        bottom: 0;
         z-index: 999;
         position: inherit;
         background-color: var(--text-color);
@@ -262,18 +278,17 @@ header nav ul li :hover{
     }
     
     .side-bar{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        display:  flex;
+        flex-direction: row;
+        align-items: center;
         justify-content: center;
-        width: 250px;
-        height: 60vh;
+        width: 600px;
+        height: 2cm;
         position: fixed;
-        margin-top: 10px;
         border-bottom-left-radius: 10px;
         border-top-left-radius: 10px;
-        top: 0;
-        right: 0;
+        bottom: 0;
+        z-index: 1;
         background-color: var(--footer);
         border-bottom: 5px solid var(--card);
         border-width: 100%;
@@ -281,11 +296,12 @@ header nav ul li :hover{
         border-width: 100%;
         border-left: 5px solid var(--card);
         border-width: 100%;
-        z-index: 1;
+        opacity: 80%;
+        transition: all .5s ease-in-out;
     }
     .side-bar  ul{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         list-style: none;
@@ -369,14 +385,35 @@ header nav ul li :hover{
         padding: 5px;
         border-radius: 8px;
         color: var(--text-color);
+        transition: .5s ease-in-out;
     }
     .call-btn:hover{
+        scale: 1.05;
+        transform: translateY(-30%);
+        box-shadow: 0px 8px  15px rgba(0,0,0,1);
+        border-radius: 8px;
         background-color: var(--main-card);
+        color: black;
+        cursor: pointer;
+        font-weight: 600;
     }
+    button{
+        width: 100%;
+        margin: 20px;
+        height: 30px;
+        border-radius: 8px;
+        color: var(--bg-color);
+        font-weight: 600;
+}
+    
 }
 
 /* footer */
 footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
     background-color: var(--footer);
     border-top: 5px solid var(--card);
@@ -398,7 +435,12 @@ footer nav ul{
 }
 footer nav ul li{
     list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 16px 12px;
 }
 footer nav ul li a{
     text-decoration: none;
+    color: var(--text-color);
 }
